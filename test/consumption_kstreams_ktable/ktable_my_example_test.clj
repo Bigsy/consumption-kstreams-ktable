@@ -39,9 +39,9 @@
       (create tariffs-topic "tariffid-2" {:tariffId "tariffid-2" :version 3 :rate 13})
 
       ;load contracts
-      (create contracts-topic "tariffid-1" {:contractId "contractid-1" :tariffId "tariffid-1" :mpxn "mpxn-1"})
-      (create contracts-topic "tariffid-2" {:contractId "contractid-2" :tariffId "tariffid-2" :mpxn "mpxn-2"})
-      (create contracts-topic "tariffid-1" {:contractId "contractid-3" :tariffId "tariffid-1" :mpxn "mpxn-3"})
+      (create contracts-topic "contractid-1" {:contractId "contractid-1" :tariffId "tariffid-1" :mpxn "mpxn-1"})
+      (create contracts-topic "contractid-2" {:contractId "contractid-2" :tariffId "tariffid-2" :mpxn "mpxn-2"})
+      (create contracts-topic "contractid-3" {:contractId "contractid-3" :tariffId "tariffid-1" :mpxn "mpxn-3"})
 
       ;stream consumption
       (create consumption-topic "mpxn-1" {:consumption 10 :mpxn "mpxn-1"})

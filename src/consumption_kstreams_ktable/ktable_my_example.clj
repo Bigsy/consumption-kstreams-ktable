@@ -36,6 +36,14 @@
                                                    (list left right)) left right)))))
 
         contract-tariff_ktable (-> contract-stream
+                                   (.map (reify KeyValueMapper
+                                           (apply [_ k v]
+                                             ((fn [_ contracts]
+                                                ;rekey contracts
+                                                (let [value (KeyValue.
+                                                              (:tariffId contracts)
+                                                              contracts)]
+                                                  value)) k v))))
                                    (.leftJoin tariff_ktable
                                               (reify ValueJoiner
                                                 (apply [_ left right]
